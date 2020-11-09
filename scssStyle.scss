@@ -1,0 +1,75 @@
+$mainColor : #ff5100;
+$secondaryColor : #eadea9;
+
+.defaultFlex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ringBoxDefault {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: $secondaryColor;
+}
+
+header, footer {
+  @extend .defaultFlex;
+  background-color: $mainColor;
+  a {
+    text-decoration: none;
+    color: $secondaryColor;
+    font-size: 2em;
+    font-weight: bold;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  nav {
+    width: 75%;
+    @extend .defaultFlex;
+  }
+  .footerColumn {
+    @extend .defaultFlex;
+    flex-direction: column;
+  }
+}
+
+@mixin ring ($width, $color) {
+  height: $width;
+  width: $width;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid $color $width/10;
+  box-shadow : $width/40 $width/40 3px darken($color, 15), inset $width/40 $width/40 5px darken($color, 15);
+}
+
+.ring1 {
+  @include ring(50px, #ff5100);
+  margin: 10px;
+}
+
+.ring2 {
+  @include ring(200px, #e9ca4e);
+  margin: 30px;
+}
+
+.ringBox, .ringLoop {
+  @extend .ringBoxDefault;
+}
+
+.ringColumn {
+  @extend .ringBoxDefault;
+  flex-direction: column;
+}
+
+@for $i from 1 through 6 {
+  .ringLoop div:nth-child(#{$i}) {
+    @include ring($i*10+30px, #322d26);
+    margin-left: -($i+$i*6px);
+  }
+}

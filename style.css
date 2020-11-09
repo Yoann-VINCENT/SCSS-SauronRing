@@ -1,0 +1,118 @@
+.defaultFlex, header .footerColumn, footer .footerColumn, header nav, footer nav, header, footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ringBoxDefault, .ringColumn, .ringBox, .ringLoop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #eadea9;
+}
+
+header, footer {
+    background-color: #ff5100;
+}
+header a, footer a {
+    text-decoration: none;
+    color: #eadea9;
+    font-size: 2em;
+    font-weight: bold;
+}
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+header nav, footer nav {
+    width: 75%;
+}
+header .footerColumn, footer .footerColumn {
+    flex-direction: column;
+}
+
+.ring1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #ff5100 5px;
+    box-shadow: 1.25px 1.25px 3px #b33900, inset 1.25px 1.25px 5px #b33900;
+    margin: 10px;
+}
+
+.ring2 {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #e9ca4e 20px;
+    box-shadow: 5px 5px 3px #d1ac1a, inset 5px 5px 5px #d1ac1a;
+    margin: 30px;
+}
+
+.ringColumn {
+    flex-direction: column;
+}
+
+.ringLoop div:nth-child(1) {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 4px;
+    box-shadow: 1px 1px 3px #070605, inset 1px 1px 5px #070605;
+    margin-left: -7px;
+}
+
+.ringLoop div:nth-child(2) {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 5px;
+    box-shadow: 1.25px 1.25px 3px #070605, inset 1.25px 1.25px 5px #070605;
+    margin-left: -14px;
+}
+
+.ringLoop div:nth-child(3) {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 6px;
+    box-shadow: 1.5px 1.5px 3px #070605, inset 1.5px 1.5px 5px #070605;
+    margin-left: -21px;
+}
+
+.ringLoop div:nth-child(4) {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 7px;
+    box-shadow: 1.75px 1.75px 3px #070605, inset 1.75px 1.75px 5px #070605;
+    margin-left: -28px;
+}
+
+.ringLoop div:nth-child(5) {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 8px;
+    box-shadow: 2px 2px 3px #070605, inset 2px 2px 5px #070605;
+    margin-left: -35px;
+}
+
+.ringLoop div:nth-child(6) {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid #322d26 9px;
+    box-shadow: 2.25px 2.25px 3px #070605, inset 2.25px 2.25px 5px #070605;
+    margin-left: -42px;
+}
